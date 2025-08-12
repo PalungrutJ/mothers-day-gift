@@ -11,8 +11,8 @@ body {
     overflow: hidden; /* ซ่อน scrollbar */
 }
 
-/* คอนเทนเนอร์สำหรับดอกมะลิ */
-#jasmine-container {
+/* คอนเทนเนอร์สำหรับ Particle (อิโมจิ) */
+#particle-container {
     position: fixed;
     top: 0;
     left: 0;
@@ -22,14 +22,13 @@ body {
     z-index: 9999;
 }
 
-.jasmine {
+/* สไตล์ของอิโมจิที่ร่วงหล่น */
+.particle {
     position: absolute;
-    width: 25px;
-    height: 25px;
-    background-image: url('https://i.imgur.com/s4Yy1z2.png'); /* รูปดอกมะลิ */
-    background-size: contain;
-    background-repeat: no-repeat;
+    font-size: 22px; /* ขนาดของอิโมจิ */
     animation: fall linear forwards;
+    user-select: none; /* ทำให้เลือกข้อความอิโมจิไม่ได้ */
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Animation การร่วงหล่น */
@@ -45,7 +44,7 @@ body {
     position: relative;
     z-index: 1;
     background-color: rgba(255, 255, 255, 0.85);
-    padding: 30px 40px;
+    padding: 40px; /* เพิ่ม padding เพราะไม่มีรูปพวงมาลัยแล้ว */
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -55,13 +54,12 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-header .garland {
-    width: 120px;
-    margin-bottom: -10px;
+header {
+    margin-bottom: 15px;
 }
 
 h1 {
-    color: #d83a56; /* สีชมพูอมแดง */
+    color: #d83a56;
     font-size: 2.8em;
     font-weight: 600;
     margin: 0;
@@ -84,7 +82,6 @@ h2 {
     color: #4a4a4a;
 }
 
-/* ปุ่มกด */
 #revealButton {
     background-color: #d83a56;
     color: white;
@@ -105,7 +102,6 @@ h2 {
     box-shadow: 0 5px 15px rgba(216, 58, 86, 0.4);
 }
 
-/* ข้อความที่ซ่อนไว้ */
 #hiddenMessage {
     margin-top: 25px;
     padding: 20px;
